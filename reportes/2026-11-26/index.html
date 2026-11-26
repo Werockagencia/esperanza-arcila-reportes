@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Informe de campañas · Esperanza Arcila · 26 nov 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--crema:#FBF6EE;--papel:#fff;--tinta:#2B1D17;--suave:#6b5a50;--linea:#e7dccd;--vino:#5C1F2E;--teal:#1FA898;--rosa:#E8418A;--naranja:#F06A1E;--morado:#7A3E9A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--crema);color:var(--tinta);font:16px/1.6 Manrope,system-ui,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:40px 20px 80px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;margin:0}
+h1{font-size:clamp(34px,6vw,56px);letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;font-weight:400;color:var(--vino)}
+h2{font-size:30px;margin-bottom:14px}
+h3{font-size:20px;margin-bottom:6px}
+.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--suave);font-weight:700}
+header{border-bottom:2px solid var(--tinta);padding-bottom:24px;margin-bottom:36px}
+header .meta{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:16px;color:var(--suave);font-size:14px}
+section{margin:0 0 52px;break-inside:avoid}
+.lead{font-size:19px;max-width:760px}
+.simple{background:var(--papel);border-left:6px solid var(--teal);padding:22px 26px;border-radius:4px;margin:22px 0}
+.simple p{margin:.4em 0}
+.simple strong{color:var(--vino)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.kpi{background:var(--papel);border:1px solid var(--linea);border-radius:6px;padding:18px}
+.kpi b{display:block;font-family:Fraunces,serif;font-size:34px;font-weight:600;line-height:1.1}
+.kpi span{font-size:13px;color:var(--suave)}
+.kpi.ok b{color:var(--teal)} .kpi.alerta b{color:var(--naranja)} .kpi.cero b{color:var(--rosa)}
+table{width:100%;border-collapse:collapse;background:var(--papel);border:1px solid var(--linea);font-size:15px}
+th,td{padding:11px 14px;text-align:right;border-bottom:1px solid var(--linea)}
+th:first-child,td:first-child{text-align:left}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--suave);font-weight:700;background:#fdfaf5}
+td.n{font-variant-numeric:tabular-nums}
+.camp{display:grid;grid-template-columns:150px 1fr;gap:22px;background:var(--papel);border:1px solid var(--linea);border-radius:6px;padding:20px;margin-bottom:16px}
+.camp img{width:150px;border-radius:4px;display:block}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;margin-left:8px;vertical-align:middle}
+.tag.ok{background:#dff4f1;color:#0f6f64}.tag.mal{background:#fde7d9;color:#a8430c}.tag.prog{background:#efe6f5;color:var(--morado)}
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.mini div{background:var(--crema);border-radius:4px;padding:10px 12px}
+.mini b{display:block;font-size:20px;font-family:Fraunces,serif}
+.mini span{font-size:12px;color:var(--suave)}
+.embudo{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.paso{display:grid;grid-template-columns:220px 1fr 90px;align-items:center;gap:14px}
+.barra{height:26px;background:var(--linea);border-radius:3px;overflow:hidden}
+.barra i{display:block;height:100%;background:var(--teal)}
+.paso.rojo .barra i{background:var(--rosa)}
+.paso b{text-align:right;font-variant-numeric:tabular-nums}
+.ig{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:16px}
+.ig figure{margin:0;font-size:12px;color:var(--suave)}
+.ig img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px;display:block}
+.ig .falta img{opacity:.35;filter:grayscale(1)}
+.ig figcaption b{color:var(--tinta)}
+ol.recos{padding-left:0;list-style:none;counter-reset:r}
+ol.recos li{counter-increment:r;background:var(--papel);border:1px solid var(--linea);border-radius:6px;padding:18px 20px 18px 70px;position:relative;margin-bottom:12px}
+ol.recos li::before{content:counter(r);position:absolute;left:20px;top:14px;font-family:Fraunces,serif;font-size:34px;color:var(--vino)}
+.nota{font-size:13px;color:var(--suave)}
+footer{border-top:1px solid var(--linea);padding-top:18px;font-size:13px;color:var(--suave)}
+@media (max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}.camp{grid-template-columns:1fr}.ig{grid-template-columns:repeat(3,1fr)}.paso{grid-template-columns:120px 1fr 60px}table{font-size:13px}th,td{padding:8px}}
+@media print{body{background:#fff}.wrap{padding:0 10mm}section{margin-bottom:28px}.kpi,.camp,table,.simple,ol.recos li{border-color:#ddd}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Esperanza Arcila · Arte que transforma · Informe de campañas Nº 01</div>
+  <h1>Primera semana de anuncios: <em>la gente llega, todavía no compra</em></h1>
+  <div class="meta">
+    <span><b>Período:</b> 18 al 25 de noviembre de 2026 (8 días)</span>
+    <span><b>Pauta total:</b> $600.000 · 18 nov – 18 dic</span>
+    <span><b>Preparado por:</b> We Rock</span>
+  </div>
+</header>
+
+<section>
+  <h2>En pocas palabras</h2>
+  <div class="simple">
+    <p>En una semana, <strong>más de 8.600 personas</strong> vieron los anuncios con tu historia y <strong>500 entraron a la tienda</strong> a mirar tus piezas. Eso es muy buen resultado para el dinero invertido.</p>
+    <p>Lo que todavía no pasa es la <strong>compra</strong>: las personas miran, algunas preguntan el precio por WhatsApp, pero <strong>no hemos registrado ventas</strong> desde que empezaron los anuncios.</p>
+    <p>Por eso proponemos cambiar el dinero hacia lo que mejor funciona (la tienda) y empezar ya a <strong>volver a mostrarles tus obras</strong> a quienes ya las vieron.</p>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><b>$96.466</b><span>invertidos de $600.000 (16 %)</span></div>
+    <div class="kpi ok"><b>500</b><span>visitas a la tienda a $70 cada una</span></div>
+    <div class="kpi"><b>17</b><span>conversaciones por WhatsApp</span></div>
+    <div class="kpi cero"><b>0</b><span>compras registradas desde los anuncios</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Cómo le fue a <em>cada anuncio</em></h2>
+
+  <div class="camp">
+    <img src="img/reel01.jpg" alt="Portada del Reel Me olvidé de vivir">
+    <div>
+      <h3>C2 · Tienda <span class="tag ok">Funciona muy bien</span></h3>
+      <p>El Reel <i>Me olvidé de vivir</i> lleva a las personas directo a esperanzaarcila.com. <b>9 de cada 100 personas que lo ven hacen clic</b>; lo normal en Meta es 1 o 2. La historia de Esperanza conecta.</p>
+      <div class="mini">
+        <div><b>5.732</b><span>personas alcanzadas</span></div>
+        <div><b>633</b><span>clics · 9,12 % de clics</span></div>
+        <div><b>500 · $70</b><span>visitas a la tienda · costo c/u</span></div>
+      </div>
+      <p class="nota">Gastado: $34.955 de $180.000.</p>
+    </div>
+  </div>
+
+  <div class="camp">
+    <img src="img/reel01.jpg" alt="Portada del Reel Me olvidé de vivir">
+    <div>
+      <h3>C1 · WhatsApp <span class="tag mal">Cara y con trabajo manual</span></h3>
+      <p>El mismo Reel, pero con botón para escribir por WhatsApp. Generó 17 conversaciones (Esperanza contó 9 personas preguntando precios), <b>sin ventas</b>. Cada conversación cuesta $3.618, 50 veces más que una visita a la tienda, y obliga a responder chats uno por uno.</p>
+      <div class="mini">
+        <div><b>2.949</b><span>personas alcanzadas</span></div>
+        <div><b>49</b><span>clics · 1,32 % de clics</span></div>
+        <div><b>17 · $3.618</b><span>conversaciones · costo c/u</span></div>
+      </div>
+      <p class="nota">Gastado: $61.511 de $360.000. Es la campaña con más presupuesto y la que menos rinde.</p>
+    </div>
+  </div>
+
+  <div class="camp">
+    <img src="img/reel07.jpg" alt="Portada del Reel de Navidad">
+    <div>
+      <h3>C3 · Remarketing de Navidad <span class="tag prog">Programada para el 1 de diciembre</span></h3>
+      <p>Anuncio <i>Navidad · Elige la tuya</i> que se muestra solo a quienes ya visitaron la tienda. Hoy ya hay 500 visitantes a quienes recordarles las piezas antes del cierre de pedidos navideños (16 de diciembre).</p>
+      <p class="nota">Presupuesto: $60.000. Aún no ha gastado.</p>
+    </div>
+  </div>
+
+  <table>
+    <thead><tr><th>Anuncio</th><th>Gasto</th><th>Alcance</th><th>Frecuencia</th><th>Costo por mil</th><th>Clics</th><th>% clics</th><th>Resultado</th><th>Costo c/u</th></tr></thead>
+    <tbody>
+      <tr><td>C2 · Tienda</td><td class="n">$34.955</td><td class="n">5.732</td><td class="n">1,21</td><td class="n">$5.034</td><td class="n">633</td><td class="n">9,12 %</td><td class="n">500 visitas</td><td class="n">$70</td></tr>
+      <tr><td>C1 · WhatsApp</td><td class="n">$61.511</td><td class="n">2.949</td><td class="n">1,26</td><td class="n">$16.584</td><td class="n">49</td><td class="n">1,32 %</td><td class="n">17 chats</td><td class="n">$3.618</td></tr>
+      <tr><td>C3 · Remarketing</td><td class="n">$0</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">desde 1 dic</td><td class="n">—</td></tr>
+      <tr><td><b>Total</b></td><td class="n"><b>$96.466</b></td><td class="n">8.681*</td><td></td><td></td><td class="n"><b>682</b></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p class="nota">* Suma de las dos campañas; una misma persona pudo ver ambas. Fuente: Administrador de anuncios de Meta, cuenta CP Artify, 18–25 nov 2026.</p>
+</section>
+
+<section>
+  <h2>¿Qué pasa <em>dentro de la tienda</em>?</h2>
+  <p>El pixel de Meta registra cada paso que hace un visitante en esperanzaarcila.com. Últimas cuatro semanas (29 oct – 25 nov):</p>
+  <div class="embudo">
+    <div class="paso"><span>Páginas vistas</span><div class="barra"><i style="width:100%"></i></div><b>3.400</b></div>
+    <div class="paso"><span>Vieron una pieza</span><div class="barra"><i style="width:21%"></i></div><b>722</b></div>
+    <div class="paso"><span>Agregaron al carrito</span><div class="barra"><i style="width:4%"></i></div><b>37</b></div>
+    <div class="paso"><span>Llegaron a pagar</span><div class="barra"><i style="width:2%"></i></div><b>17</b></div>
+    <div class="paso rojo"><span>Compraron</span><div class="barra"><i style="width:1%"></i></div><b>1</b></div>
+  </div>
+  <p class="nota">La única compra registrada es del 15 de noviembre, antes de que empezaran los anuncios. El 22 de noviembre We Rock hizo una prueba completa hasta la página de pago (sin pagar): el carrito, el botón de pago y Wompi funcionan bien, así que la tienda no está rota.</p>
+  <div class="simple">
+    <p><strong>Qué significa:</strong> mucha gente mira, pocos agregan al carrito y casi nadie paga. Para un regalo de $45.000 a $190.000 es normal que la gente lo piense; por eso es clave recordarles las piezas (remarketing) y quitar dudas: costo de envío, tiempos de entrega y fecha límite para Navidad.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Contenidos de <em>Instagram</em></h2>
+  <p>El plan eran 12 publicaciones entre el 17 de noviembre y el 8 de diciembre. <b>Se publicaron las 3 primeras</b> (17 nov) y las siguientes quedaron sin salir. El perfil tiene hoy 22 seguidores.</p>
+  <div class="ig">
+    <figure><img src="img/reel01.jpg" alt=""><figcaption><b>Nº 01 Reel</b><br>Publicado 17 nov</figcaption></figure>
+    <figure><div style="aspect-ratio:4/5;border-radius:3px;background:var(--vino);color:#fff;display:grid;place-items:center;font:600 22px Fraunces,serif">02 · 03</div><figcaption><b>Nº 02 y 03</b><br>Publicados 17 nov</figcaption></figure>
+    <figure class="falta"><img src="img/n04.jpg" alt=""><figcaption><b>Nº 04 Proceso</b><br>Se publica hoy</figcaption></figure>
+    <figure class="falta"><img src="img/n05.jpg" alt=""><figcaption><b>Nº 05 Significados</b><br>Pendiente</figcaption></figure>
+    <figure class="falta"><img src="img/n06.jpg" alt=""><figcaption><b>Nº 06 Safari</b><br>Pendiente</figcaption></figure>
+    <figure class="falta"><img src="img/reel07.jpg" alt=""><figcaption><b>Nº 07 Reel Navidad</b><br>Pendiente</figcaption></figure>
+  </div>
+  <p>Desde hoy retomamos con <b>dos publicaciones por semana</b> y dejamos programadas las nueve que faltan, priorizando las de Navidad antes del cierre de pedidos del 16 de diciembre.</p>
+  <p class="nota">Pendiente en el perfil: la biografía aún muestra la dirección de la casa y el enlace antiguo (w.app/artifyart). Proponemos quitar la dirección y enlazar esperanzaarcila.com.</p>
+</section>
+
+<section>
+  <h2>Lo que <em>proponemos</em> para las próximas tres semanas</h2>
+  <ol class="recos">
+    <li><h3>Pausar la campaña de WhatsApp y pasar ese dinero a la tienda</h3>Quedan cerca de $298.000 en C1. Moverlos a C2 (tienda) y C3 (remarketing) multiplica las visitas y le quita a Esperanza el trabajo de responder chats uno por uno.</li>
+    <li><h3>Encender el remarketing ya, no el 1 de diciembre</h3>Hay 500 personas que ya vieron la tienda. Recordarles las piezas con el mensaje de Navidad es lo que más suele convertir visitas en compras.</li>
+    <li><h3>Mostrar envío y fecha límite de Navidad desde el principio</h3>Que cada pieza diga el costo de envío aproximado y "pide antes del 16 de diciembre para recibir en Navidad". También corregir el precio que aparece en Google para la Libreta Colibrí ($45.000 en el título, $55.000 en la página).</li>
+    <li><h3>Respuesta automática en el WhatsApp de la empresa</h3>Un mensaje de bienvenida con el enlace de la tienda y los precios, para que quien escriba reciba la información sin que Esperanza tenga que contestar.</li>
+    <li><h3>Instagram al día: dos publicaciones por semana</h3>Publicar el contenido pendiente para que quien llegue por un anuncio encuentre un perfil vivo y con confianza.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Una pregunta para <em>Esperanza</em></h2>
+  <div class="simple"><p>¿Se ha concretado alguna venta por fuera de la página (WhatsApp, en persona, por recomendación) desde el 18 de noviembre? Nos ayuda a medir el efecto real de los anuncios.</p></div>
+</section>
+
+<footer>We Rock · Informe de campañas Meta Ads · Esperanza Arcila · Corte 26 de noviembre de 2026 · Datos: Administrador de anuncios y Administrador de eventos de Meta, Instagram @esperanza_arcila_arte.</footer>
+</div>
+</body>
+</html>
