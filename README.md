@@ -16,7 +16,7 @@ Pauta: **$600.000**, 18 nov – 18 dic 2026, cuenta publicitaria CP Artify.
 
 ## Proceso de cada corte
 1. Ads Manager → Anuncios → Columnas "Rendimiento y clics" → copiar a `data/AAAA-MM-DD_anuncios.csv`.
-2. Administrador de eventos → conjunto de datos 3384494888402003 → copiar el embudo a `data/AAAA-MM-DD_pixel.csv`.
+2. Administrador de eventos → conjunto de datos de Esperanza Arcila - Artista → copiar el embudo a `data/AAAA-MM-DD_pixel.csv`.
 3. Revisar Instagram (publicaciones al día) y preguntar a Esperanza por ventas fuera de la web.
 4. Copiar `reportes/<último>/index.html`, actualizar cifras y exportar el PDF:
    ```bash
